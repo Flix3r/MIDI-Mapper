@@ -101,7 +101,7 @@ except rtmidi.Error as e:
         print('That port does not exist, check the config file.')
     sys.exit()
 
-if config['icon']:
+if config['tray_icon']:
     import threading
     from PIL import Image
     from pystray import Menu, MenuItem, Icon
