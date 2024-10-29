@@ -1,7 +1,9 @@
 autostart: off
 start_menu_shortcut: off
 tray_icon: on
-start_key: 48
-end_key: 79
+start_key: 0
+end_key: 127
 audio_volume: 100.0
 midi_port: 0
+sound_on: assets\switch.ogg
+sound_off: assets\switch.ogg
