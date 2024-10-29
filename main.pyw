@@ -25,7 +25,7 @@ config = load_yaml('config.yaml')
 menu_data = load_yaml('Menus/main.yaml')
 
 # Set defaults
-config.setdefault('icon', True)
+config.setdefault('tray_icon', True)
 config.setdefault('start_key', 0)
 config.setdefault('end_key', 127)
 config.setdefault('audio_volume', 100)

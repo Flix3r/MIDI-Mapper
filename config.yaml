@@ -1,6 +1,6 @@
 autostart: off
 start_menu_shortcut: off
-icon: on
+tray_icon: on
 start_key: 48
 end_key: 79
 audio_volume: 100.0
