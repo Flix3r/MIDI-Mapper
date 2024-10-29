@@ -12,6 +12,7 @@ except ImportError:
     from yaml import Loader, Dumper
 
 sys.stdout = open('log.txt', 'w')
+sys.stdout = open('log.txt', 'w')
 
 print(sys.argv)
 
