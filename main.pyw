@@ -191,7 +191,7 @@ def absolute_key(key, start=config['start_key'], end=config['end_key']):
 
 def get_handler_pair(function):
     parts = function.partition(' ')
-    module = importlib.import_module('Mods.' + parts[0])
+    module = importlib.import_module('Functions.' + parts[0])
     try:
         to_call = module.Handler()
     except AttributeError:
