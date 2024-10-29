@@ -229,7 +229,7 @@ class Menu:
                  'only_downpress': True,
                  'functions': [['menu', len(self.menus)]],
                  'return': 0})
-            self.menus.append(Menu(load_yaml(f"Menus/{menu['path']}.yaml"), path + '/' + menu['path']))
+            self.menus.append(Menu(load_yaml(f"Menus/{menu['name']}.yaml"), path + '/' + menu['path']))
         self.menu = -1
 
     def press(self, note, on, vel):
