@@ -1,0 +1,4 @@
+actions:
+- function: run calc
+  only_downpress: true
+  key: w0

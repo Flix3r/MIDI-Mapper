@@ -1,0 +1,7 @@
+pynput
+rtmidi
+PyYAML
+pygame
+Pillow
+pystray
+winshell
