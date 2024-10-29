@@ -1,7 +1,8 @@
 A highly customizable Windows utility to map a MIDI Controller to various functions.
 
 # USAGE
-To use download the latest release and extract the archive or clone the repo. After configuring run once for the startup and start menu shortcuts to be created.
+Requires Python3.
+To use download the latest release and extract the archive or clone the repo and set up a virtual environment. After configuring run `main.pyw` for the startup and start menu shortcuts to be created.
 ## Configuration
 All configuration uses YAML. The basic configuration is located in the `config.yaml` file. The options are:
 | Option | Value | Default | Description |
