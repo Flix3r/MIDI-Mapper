@@ -222,7 +222,7 @@ class Menu:
                                  'return': 1})
         self.menus = []
         for menu in data.get('menus', []):
-            if menu['path'] in path.split('/'):
+            if menu['name'] in path.split('/'):
                 raise RecursionError('Can not loop menus')
 
             self.actions.append(
@@ -230,7 +230,7 @@ class Menu:
                  'only_downpress': True,
                  'functions': [['menu', len(self.menus)]],
                  'return': 0})
-            self.menus.append(Menu(load_yaml(f"Menus/{menu['name']}.yaml"), path + '/' + menu['path']))
+            self.menus.append(Menu(load_yaml(f"Menus/{menu['name']}.yaml"), path + '/' + menu['name']))
         self.menu = -1
 
     def press(self, note, on, vel):
