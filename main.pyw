@@ -260,7 +260,7 @@ class Menu:
                     *function[1].split()
                 )
             return action['return']
-
+        return 0
 
 main_menu = Menu(menu_data)
 print("Menus loaded, listening started.")
