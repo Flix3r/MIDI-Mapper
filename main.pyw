@@ -226,7 +226,7 @@ class Menu:
                 raise RecursionError('Can not loop menus')
 
             self.actions.append(
-                {'keys': [absolute_key(key) for key in action.get('keys', [action['key']] if 'key' in menu else [])],
+                {'keys': [absolute_key(key) for key in menu.get('keys', [menu['key']] if 'key' in menu else [])],
                  'only_downpress': True,
                  'functions': [['menu', len(self.menus)]],
                  'return': 0})
