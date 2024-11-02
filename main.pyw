@@ -242,6 +242,7 @@ class Menu:
             self.menu = -1
             return -1 if to_return == -1 else to_return - 1
 
+        to_return = 0
         for action in self.actions:
             if note not in action['keys'] or (action['only_downpress'] and not on):
                 continue
@@ -251,16 +252,25 @@ class Menu:
                 if function[0] == 'menu':
                     self.menu = function[1]
                     continue
-                function[0].function(
+                function_return = function[0].function(
                     {'key': note,
                      'on': on,
                      'vel': vel,
                      'state': state
                      },
-                    *function[1].split()
-                )
-            return action['return']
-        return 0
+                    *function[1].split())
+                if to_return != -1 and function_return is not None:
+                    if function_return == -1:
+                        to_return = -1
+                    else:
+                        to_return += function_return
+            if to_return != -1:
+                if action['return'] == -1:
+                    to_return = -1
+                else:
+                    to_return += action['return']
+        return to_return
+
 
 main_menu = Menu(menu_data)
 print("Menus loaded, listening started.")
