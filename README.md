@@ -34,7 +34,7 @@ menus:  # Contains a list of all sub-menus of this menu
 ```
 All menus except the main one are automatically bound to return to their parent menus when the first black key is pressed.
 ### Keys
-They keys can be written in the following ways:
+The keys can be written in the following ways:
 | Syntax | Description |
 | ------ | ----------- |
 | <0-127> | The absolute MIDI key. |
@@ -42,7 +42,7 @@ They keys can be written in the following ways:
 | w<-127-127> | The relative white key. 0 is the first and -1 is the last white key. |
 | b<-127-127> | The relative black key. 0 is the first and -1 is the last black key. |
 ## Functions
-Here are the currently implemented functions:
+The currently implemented functions are:
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | log | text | Outputs the text in the log. |
@@ -61,7 +61,7 @@ You may add custom functions to the `/Mods/` directory using Python scripts. The
 def function(info):
     # Code to be run when pressed
 ```
-If your function needs to store data, you may use a class:
+You may also use a class:
 ```python
 # The class is initialized upon startup
 class Handler:
